@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-<title>Clientes</title>
+<title>Cheques</title>
 </head>
 <body>	
 
@@ -24,13 +24,13 @@
         </thead>
         
         <tbody>          
-        	<c:forEach var="cliente" items="${clientes}">
+        	<c:forEach var="cheques" items="${cliente}">
                 <tr>
                     <td><c:out value="${cliente.name}" /></td>
                     <td><c:out value="${cliente.id}" /></td>
                     
-                    <td><a href="compras?clienteName=<c:out value="${cliente.name}"/>">Ver</a></td>                    
-                    <td><a href="cuentas?clienteName=<c:out value="${cliente.name}"/>">Ver</a></td>
+                    <td><a href="cheques?clienteName=<c:out value="${cliente.name}"/>">Ver</a></td>                    
+                    <td><a href="cheques?clienteName=<c:out value="${cliente.name}"/>">Ver</a></td>
 	    				<td><a href="cheques?clienteName=<c:out value="${cliente.name}"/>">Ver</a></td>
 	    				<td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Borrar</a></td>
                     <td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Actualizar</a></td>
@@ -38,9 +38,3 @@
             </c:forEach>
         </tbody>
     </table>
-    <p><a href="ClienteController?action=insert">Agregar Cliente (Pendiente)</p>
-	</body>
-    </table>
-    <p><a href="ClienteController?action=insert">Agregar Cuenta (Pendiente)</p>
-</body>
-</html>

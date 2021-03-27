@@ -12,6 +12,11 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 	<context:component-scan base-package="main.java.uia.com.contabilidad.mvc.*" />
+	<context:component-scan base-package="editar.jsp*" />
+	<context:component-scan base-package="verClientes.jsp*" />
+	<context:component-scan base-package="verCompras.jsp*" />
+	<context:component-scan base-package="verCuentas.jsp*" />
+	<context:component-scan base-package="verCheques.jsp*" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->

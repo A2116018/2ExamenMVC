@@ -51,9 +51,9 @@
 				                    </tbody>
 				    				</table>
 			            </td>                     
-	    				<td>Pendiente</a></td>
-	    				<td>Pendiente</a></td>
-	    				<td>Pendiente</a></td>
+	    				<td><a href="ver?chequeName=<c:out value="${cliente.name}"/>">Ver</a></td>
+	    				<td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Borrar</a></td>
+	    				<td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Actualizar</a></td>
 	    				</c:when>  
 		                    </c:choose>
 	    				</td>  
@@ -70,9 +70,9 @@
             </c:forEach>
         </tbody>
     </table>
-    <p>Agregar Cliente (Pendiente)</p>
+    <p><a href="ClienteController?action=insert">Agregar Cliente (Pendiente)</p>
 	</body>
     </table>
-    <p>Agregar Cuenta (Pendiente)</p>
+    <p><a href="ClienteController?action=insert">Agregar Cuenta (Pendiente)</p>
 </body>
 </html>

@@ -58,14 +58,15 @@
 							        <tbody>
 									        	<c:forEach var="cuenta" items="${cuentas}">
 								                <tr>
-								                    <td><c:out value="${cuenta.name}" /></td>
+								                    <td><a href="ClienteController?action=insert"></td>
 								                    <td><c:out value="${cuenta.id}" /></td>
 								                </tr>
 								            	</c:forEach>
 				                    </tbody>
 				    				</table>
 			            </td>                     
-	    				<td>Pendiente</a></td>
+	    				<td><a href="ClienteController?action=insert"></a></td>
+	    				<c:out value="${cheque.id}" />
 	    				<td>Pendiente</a></td>
 	    				<td>
 	    				
@@ -98,9 +99,9 @@
             </c:forEach>
         </tbody>
     </table>
-    <p>Agregar Cliente (Pendiente)</p>
+    <p><a href="ClienteController?action=insert">Agregar Cliente (Pendiente)</p>
 	</body>
     </table>
-    <p>Agregar Cuenta (Pendiente)</p>
+    <p><a href="ClienteController?action=insert">Agregar Cuenta (Pendiente)</p>
 </body>
 </html>

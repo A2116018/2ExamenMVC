@@ -55,8 +55,24 @@ public class ClientesController {
 		model.addAttribute("clienteActual", this.dao.clienteId);
 		model.addAttribute("compras", this.getListaCompras());
 		model.addAttribute("cuentas", this.getListaCuentas());
-		return "verCompras";
+		return "verCuentas";
 	}
+	
+	@RequestMapping(value = "/cheques", method = RequestMethod.GET)
+	public String cargaCuentas(@RequestParam String clienteName, 
+		      ModelMap model)
+	{
+		System.out.println("Pagina Cheques solicitada, locale = ");
+
+		this.dao.getCompras(clienteName);;
+		model.addAttribute("clientes", getListaClientes());
+		model.addAttribute("clienteActual", this.dao.clienteId);
+		model.addAttribute("compras", this.getListaCompras());
+		model.addAttribute("cuentas", this.getListaCuentas());
+
+		return "verCheques";
+	}
+	
 	
 
 	@RequestMapping(value = "/editar", method = RequestMethod.GET)

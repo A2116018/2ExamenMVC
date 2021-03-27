@@ -65,9 +65,9 @@
 				                    </tbody>
 				    				</table>
 			            </td>                     
-	    				<td>Pendiente</a></td>
-	    				<td>Pendiente</a></td>
-	    				<td>Pendiente</a></td>
+	    				<td><c: out value="${cliente.name }"/></a></td>
+	    				<td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Borrar</a></td>
+	    				<td><a href="editar?clienteName=<c:out value="${cliente.name}"/>">Actualizar</a></td>
 	    				</c:when>  
 		                    </c:choose>
 	    				</td>  

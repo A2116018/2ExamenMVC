@@ -37,6 +37,17 @@ public class HomeController {
 
 		return "verClientes";
 	}
+	
+	@RequestMapping(value = "/verCheques", method = RequestMethod.GET)
+	public String home(Locale locale, Model model) {
+		System.out.println("VerCheques  Requested, locale = " + locale);
+		
+		model.addAttribute("cheques", getListaClientes());
+
+		return "verCheques";
+	}
+	
+	
 
 
 	@ModelAttribute("listaCLientes")
